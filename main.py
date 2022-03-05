@@ -8,6 +8,7 @@ def listado_descargas():
     print ("Directorio de descargas: " + str(path))
 
     for p in Path(path).iterdir():
-        print (p)
+        if not p.is_dir():
+            print (p)
 
 listado_descargas()
